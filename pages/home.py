@@ -2,15 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 # importing the team analysis csv for overall analysis
-df=pd.read_csv("team_analysis_df.csv")
-bower_df=pd.read_csv("bowler_wicket_runs.csv")
-train_df=pd.read_csv("cleaned_ipl_data.csv")
+df=pd.read_csv("data\\team_analysis_df.csv")
+bower_df=pd.read_csv("data\\bowler_wicket_runs.csv")
+train_df=pd.read_csv("data\\cleaned_ipl_data.csv")
 st.set_page_config(layout="wide")
 st.set_page_config(
     page_title="Home",
     page_icon="🏦",
 )
-
+# ------page setup ------
 # ---------- CUSTOM CSS ----------
 st.markdown("""
 <style>
