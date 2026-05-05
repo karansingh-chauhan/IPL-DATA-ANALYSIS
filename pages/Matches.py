@@ -40,6 +40,12 @@ div[data-testid="stDateInput"] input {
 }
 
 </style>
+@st.cache_data(show_spinner="Loading IPL data...")
+def load_data():
+    
+    return pd.read_csv(url)
+
+train_df= load_data()
 """, unsafe_allow_html=True)
 
 # ---------------- LOAD DATA ----------------
