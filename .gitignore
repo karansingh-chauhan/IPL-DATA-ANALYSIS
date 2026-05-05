@@ -4,6 +4,4 @@ scorecard.png
 ChatGPT Image Apr 22, 2026, 10_51_05 AM.png
 how the page shoud look.png
 *.ipynb
-__pycache__
-data/
-*.csv
+main.ipynb
