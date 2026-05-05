@@ -5,3 +5,6 @@ ChatGPT Image Apr 22, 2026, 10_51_05 AM.png
 how the page shoud look.png
 *.ipynb
 main.ipynb
+data\cleaned_ipl_data.csv
+data\bowler_wicket_runs.csv
+data\team_analysis_df.csv
