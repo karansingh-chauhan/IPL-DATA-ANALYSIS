@@ -1,10 +1,13 @@
-myenv
-IPL.csv
-scorecard.png
-ChatGPT Image Apr 22, 2026, 10_51_05 AM.png
-how the page shoud look.png
+# virtual env
+myenv/
+
+# data files
+*.csv
+data/
+
+# images
+*.png
+
+# notebooks
 *.ipynb
-main.ipynb
-data\cleaned_ipl_data.csv
-data\bowler_wicket_runs.csv
-data\team_analysis_df.csv
+!main.ipynb
