@@ -9,7 +9,8 @@ st.title("🏏 Player Performance Dashboard")
 # -----------------------
 @st.cache_data
 def load_data():
-    return pd.read_csv("data\\cleaned_ipl_data.csv")  # update path
+    cleaned_ipl_data = "https://drive.google.com/uc?export=download&id=1e2-twd_ih87O2bmXWZpEGJR5KMLiIEMA"
+    return pd.read_csv(cleaned_ipl_data)  # update path
 
 df = load_data()
 

@@ -8,7 +8,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-df=pd.read_csv("data\\cleaned_ipl_data.csv")
+cleaned_ipl_data = "https://drive.google.com/uc?export=download&id=1e2-twd_ih87O2bmXWZpEGJR5KMLiIEMA"
+df=pd.read_csv(cleaned_ipl_data)
 # -----------------------
 # CUSTOM SIDEBAR DESIGN
 # -----------------------
