@@ -125,9 +125,11 @@ c4.metric(
 def wicket_keeper(df):
     return df.loc[df['wicket_kind'] == 'stumped', 'fielders'].dropna()
 
-wickets_keeper1 = wicket_keeper(train_df).unique()
+# ✅ FIX HERE
+wickets_keeper1 = tuple(wicket_keeper(train_df).unique())
+
 @st.cache_data(hash_funcs={pd.DataFrame: lambda _: None})
-def get_top_catches(df,wkt):
+def get_top_catches(df, wkt):
     return (
         df[
             (df['wicket_kind'] == 'caught') &
@@ -139,7 +141,7 @@ def get_top_catches(df,wkt):
         .sort_values(by='count', ascending=False)
     )
 
-top_catches_df = get_top_catches(train_df,wickets_keeper1).head(1)
+top_catches_df = get_top_catches(train_df, wickets_keeper1).head(1)
 #----------------------------------------------------------------------------->
 c5.metric("Most Catches",f"{top_catches_df['count'].iloc[0]}",top_catches_df['fielders'].iloc[0])
 
