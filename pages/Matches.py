@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import sys
+st.write(sys.version)
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
