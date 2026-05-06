@@ -6,7 +6,6 @@ import numpy as np
 team_analysis_df = "https://drive.google.com/uc?export=download&id=1k6959QZ7w1WlFapbRD4eGmPtkpWN_Bve"
 bowler_wicket_run = "https://drive.google.com/uc?export=download&id=17L9ejAnGfjpfR66W1HME9mJSO9584fCB"
 cleaned_ipl_data = "https://drive.google.com/uc?export=download&id=1e2-twd_ih87O2bmXWZpEGJR5KMLiIEMA"
-
 # Read data
 df = pd.read_csv(team_analysis_df)
 bower_df = pd.read_csv(bowler_wicket_run)
@@ -127,7 +126,7 @@ def wicket_keeper(df):
     return df.loc[df['wicket_kind'] == 'stumped', 'fielders'].dropna()
 
 wickets_keeper1 = wicket_keeper(train_df).unique()
-@st.cache_data
+@st.cache_data(hash_funcs={pd.DataFrame: lambda _: None})
 def get_top_catches(df,wkt):
     return (
         df[
