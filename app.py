@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+
 # -----------------------
 # PAGE CONFIG
 # -----------------------
@@ -8,6 +9,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+import sys
+st.write(sys.version)
 cleaned_ipl_data = "https://drive.google.com/uc?export=download&id=1e2-twd_ih87O2bmXWZpEGJR5KMLiIEMA"
 df=pd.read_csv(cleaned_ipl_data)
 # -----------------------
